@@ -10,5 +10,5 @@ This project analyzes a Portuguese bank's direct phone call marketing campaigns,
 The dataset is publicly available in the UCI Machine Learning Repository, which can be retrieved from http://archive.ics.uci.edu/ml/datasets/Bank+Marketing#.
 
 ## Data Analysis & Results
-Please see the detailed analysis in the file 'Portuguese Bank Telemarketing Analysis'.
+Please see the detailed analysis in the file ***Portuguese Bank Telemarketing Analysis***.
 
