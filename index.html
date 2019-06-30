@@ -20,7 +20,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/yfsui/Project---Bank_Telemarketing_Analysis/tree/master">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/yfsui/Project---Bank_Telemarketing_Analysis/tree/master">View codes on GitHub</a>
 
           <h1 id="project_title">Bank Telemarketing Analysis</h1>
           <h2 id="project_tagline">Predicting customers' responses to future marketing campaigns</h2>
@@ -47,25 +47,43 @@
 
         <p>By analyzing customer features, such as demographics and transaction history, the bank will be able to predict customer saving behaviors and identify which type of customers is more likely to make term deposits. The bank can then focus its marketing efforts on those customers. This will not only allow the bank to secure deposits more effectively but also increase customer satisfaction by reducing undesirable advertisements for certain customers.</p>
 
-        <h1>Data Source</h1>
 
+        <h1>About the Data</h1>
         <p>The dataset is about the direct phone call marketing campaigns, which aim to promote term deposits among existing customers, by a Portuguese banking institution from May 2008 to November 2010. It is publicly available in the <a href="http://archive.ics.uci.edu/ml/datasets/Bank+Marketing#">UCI Machine Learning Repository.</a></p>
 
-        <h3>Headline 3</h3>
 
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
+        <p>TThere are 41,188 observations in the dataset, with no missing values. Each represents an existing customer that the bank reached via phone calls. 
+        <ul>
+          <li>For each observation, the dataset records <strong>16 input variables</strong> that stand for both qualitative and quantitative attributes of the customer, such as age, job, housing and personal loan status, account balance, and the number of contacts. </li>
+          <li>There is <strong>a single binary output variable</strong> that denotes “yes” or “no” revealing the outcomes of the marketing phone calls. "Yes" means that a customer subscribed to term deposits. </li>
+        </ul>
+        
+        <h3>Data Cleaning</h3>
+        <p>Several changes were made to the dataset to prepare it for analysis.</p>
+        <ol>
+          <li>
+            <p>Drop ambiguous values, such as "others" and "unknown".</p>
 
-        <h4>Headline 4</h4>
+            <p>Drop outliers to capture the general trend. Outliers are defined as customers whose balance levels are either too high or too low (i.e., more than three standard deviations away from the mean).</p>
 
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
+            <p>Change the "response" variable (yes/no) to binary values (1/0) for easier analysis.
+          </li>
+        </ol>
+
+       
+
+        <h1>Exploratory Data Analysis </h1>
+        <p>To obtain a better understanding of the dataset, the distribution of key variables and the relationships among them were plotted.</p>
+
+        
 
         <h5>Headline 5</h5>
 
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
+      
 
         <h6>Headline 6</h6>
 
-        <p>Lorem ipsizzle funky fresh i'm in the shizzle boom shackalack, consectetizzle adipiscing my shizz. Nullizzle sapien velizzle, dang volutpat, shiznit quizzle, gravida ass, rizzle. Pot get down get down tortor. Sed erizzle. Black go to hizzle dolizzle dapibizzle turpis fo shizzle my nizzle yo. Maurizzle pellentesque nibh et check it out. Bow wow wow check it out tortizzle. Pellentesque for sure rhoncizzle bow wow wow. In owned habitasse brizzle dictumst. Nizzle dapibizzle. Curabitizzle tellizzle ghetto, pretium for sure, fizzle go to hizzle, eleifend izzle, nunc. Dope suscipizzle. Integizzle boom shackalack velit ass purus.</p>
+        
 
         <p>Roses are <em>emphasized</em></br>
         Violets are <strong>strong</strong></p>
