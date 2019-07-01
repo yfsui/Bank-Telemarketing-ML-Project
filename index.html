@@ -75,7 +75,7 @@
 
 
 
-        <h1>Exploratory Data Analysis </h1>
+        <h1>Part 3. Exploratory Data Analysis </h1>
         <p>To obtain a better understanding of the dataset, the distribution of key variables and the relationships among them were plotted.</p>
 
         <h4>Visualize the distribution of customer age and balance levels:</h4>
@@ -93,7 +93,7 @@
 
         <p>Based on this scatter plot, there is no clear relationship between client’s age and balance level.Nevertheless, over the age of 60, clients tend to have a significantly lower balance, mostly under 5,000 euros. This is due to the fact that most people retire after 60 and no longer have a reliable income source.</p>
 
-        <h4>Visualize the distribution of phone call duration & the number of campaigns
+        <h4>Visualize the distribution of phone call duration & the number of campaigns</h4>
         <img alt="duration & campaign distribution" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/3.%20Distribution%20of%20Duration%20and%20Campaign.png"/>
 
         <dl>
@@ -115,7 +115,7 @@
         <p>The scatter matrix does not reveal any clear relationship among age, balance, duration and campaign.</p>
         <p>To investigate more about correlation, a correlation matrix was plotted with all qualitative variables. Clearly, “campaign outcome” has a strong correlation with “duration”, a moderate correlation with “previous contacts”, and mild correlations between “balance”, “month of contact” and “number of campaign”. Their influences on campaign outcome will be investigated further in the machine learning part.</p><br>
 
-        <h1>Data Visualization </h1>
+        <h1>Part 4. Data Visualization </h1>
         <p> Now we have a good understanding of the distribution of key variables. Five plots will be generated to further investigate the influence of different customer characteristics on the subscription rate. </p>
 
         <h4>Visualize the subscription and contact rate by customer age</h4>
@@ -175,7 +175,7 @@
         <p>Nevertheless, the bank should be cautious when analyzing external factors. More data from previous marketing campaign should be collected and analyzed to make sure that this seasonal effect is constant over time and applicable to the future.</p><br>
 
 
-        <h1>Machine Learning: Classification</h1>
+        <h1>Part 5. Machine Learning: Classification</h1>
 
         <p>The main objective of this project is to identify the most responsive customers before the marketing campaign so that the bank will be able to efficiently reach out to them, saving time and marketing resources. To achieve this objective, classification algorithms will be employed. By analyzing customer statistics, a classification model will be built to classify all clients into two groups: "yes" to term deposits and "no" to term deposits.</p>
 
@@ -212,7 +212,7 @@
         </ul>
         <p>In general, the report shows that <strong>the LR model has great predictive power to identify the customers who would not subscribe to the term deposit.</strong> However, because of the limited number of clients accepting the term deposit, there is <strong>a need for stratified sampling or rebalancing to deal with this structural weakness</strong> before we conclude whether LR algorithm can accurately classify those who are more likely to subscribe.</p><br>
 
-        <h1> Machine Learning: Regression</h1>
+        <h1> Part 6. Machine Learning: Regression</h1>
         <p>Regression analysis is carried out to complement the classification result. Since the duration of a phone call is positively correlated with the campaign outcome, it can serve as another indicator of the possibility of subscription. In this part, regression algorithms will be used to estimate the duration of a phone call, helping the bank better predict subscription rate.</p>
 
         <h3> Build Regression Model</h3>
@@ -221,7 +221,7 @@
         <p> The ridge regression model had an MSE of 17.78. According to the previous analysis, observations on duration are extremely varied from 0.1 to 81.97 minutes in this dataset. Therefore, a 17.78 MSE testifies that ridge regression is a sound model in predicting the target variable and suggest that the bank can roughly estimate the duration of campaign calls of each client using their customer profiles such as age, job, and loans.</p><br>
 
 
-        <h1> Conclusion</h1>
+        <h1> Part 7. Conclusion</h1>
         <p><strong>The main objective of this project is to increase the effectiveness of the bank's telemarketing campaign, which was successfully met through data analysis, visualization and analytical model building. A target customer profile was established while classification and regression models were built to predict customers' response to the term deposit campaign.</strong></p>
 
         <p>According to previous analysis, a target customer profile can be established. The most responsive customers possess these features:</p>
@@ -234,7 +234,7 @@
 
         <p>In addition, predicting duration before calling and adjusting marketing plan benefit both the bank and its clients. On the one hand, it will increase the efficiency of the bank’s telemarketing campaign, saving time and efforts. On the other hand, it prevents some clients from receiving undesirable advertisements, raising customer satisfaction. With the aid of logistic and ridge regression models, the bank can enter a virtuous cycle of effective marketing, more investments and happier customers.</p><br>
 
-        <h1>Recommendations</h1>
+        <h1>Part 8. Recommendations</h1>
         <p><strong>1. More appropriate timing</strong></p>
         <p>When implementing a marketing strategy, external factors, such as the time of calling, should also be carefully considered. The previous analysis points out that March, September, October and December had the highest success rates. Nevertheless, more data should be collected and analyzed to make sure that this seasonal effect is constant over time. If the trend has the potential to continue in the future, the bank should consider initiating its telemarketing campaign in fall and spring.</p>
 
