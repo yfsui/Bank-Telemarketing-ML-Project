@@ -84,13 +84,13 @@
         <p><strong>The distribution of age:</strong></p>
         <p>In its telemarketing campaigns, clients called by the bank have an extensive age range, from 18 to 95 years old. However, a majority of customers called is in the age of 30s and 40s (33 to 48 years old fall within the 25th to 75th percentiles). The distribution of customer age is fairly normal with a small standard deviation.</p>
         <p><strong>The distribution of balance:</strong></p>
-        <p>After dropping outliers in balance, the range of balance is still massive, from a minimum of -6847 to a maximum of 10443 euros, giving a range of 17290 euros. The distribution of balance has a huge standard deviation relative to the mean, suggesting large variabilities in customers' balance levels.</p>
+        <p>After dropping outliers in balance, the range of balance is still massive, from a minimum of -6847 to a maximum of 10443 euros, giving a range of 17290 euros. The distribution of balance has a huge standard deviation relative to the mean, suggesting large variabilities in customers' balance levels.</p><br>
         
 
         <h3>3.2 Visualize the relationship between customer age and balance</h3>
         <img alt="age & balance scatter" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/2.%20Scatter%20Plot%20of%20Age%20and%20Balance.png"/>
 
-        <p>Based on this scatter plot, there is no clear relationship between client’s age and balance level.Nevertheless, over the age of 60, clients tend to have a significantly lower balance, mostly under 5,000 euros. This is due to the fact that most people retire after 60 and no longer have a reliable income source.</p>
+        <p>Based on this scatter plot, there is no clear relationship between client’s age and balance level.Nevertheless, over the age of 60, clients tend to have a significantly lower balance, mostly under 5,000 euros. This is due to the fact that most people retire after 60 and no longer have a reliable income source.</p><br>
 
         <h3>3.3 Visualize the distribution of phone call duration & the number of campaigns</h3>
         <img alt="duration & campaign distribution" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/3.%20Distribution%20of%20Duration%20and%20Campaign.png"/>
@@ -100,16 +100,16 @@
           <p>As observed from the box plot, the duration of contact has a median of 3 minutes, with an interquartile range of 1.73 minutes to 5.3 minutes. The left-skewed boxplot indicates that most calls are relatively short. Also, there is a large number of outliers ranging from 10 minutes to 40 minutes, which are worth further study.</p> 
           <dt>The distribution of campaign</dt>
           <p>About half of the clients have been contacted by the bank for the second time, while 25% was first introduced to the term deposit. Most clients have been reached by the bank for one to three times, which is reasonable. However, some clients have been contacted by as high as 58 times, which is not normal. These clients may have some special needs that require frequent contact.</p>
-        </dl>
+        </dl><br>
 
         <h3>3.4 Visualize the relationship between phone call duration & the number of campaigns</h3>
         <img alt="duration & campaign scatter" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/4.%20Scatter%20Plot%20of%20Duration%20and%20Campaign.png"/>
         <p>In this scatter plot, clients subscribed to term deposits are denoted as "yes" while those did not are denoted as "no".</p>
 
-        <p>As we can see from the plot, “yes” clients and “no” clients are forming two relatively separate clusters. Compared to “no” clients”, “yes” clients were contacted by fewer times and had longer call duration. More importantly, after five campaign calls, clients are more likely to reject the term deposit unless the duration is high. Most “yes” clients were approached by less than 10 times.This suggests that the bank should resist calling a client for more than five times, which can be disturbing and increase dissatisfaction.</p>
+        <p>As we can see from the plot, “yes” clients and “no” clients are forming two relatively separate clusters. Compared to “no” clients”, “yes” clients were contacted by fewer times and had longer call duration. More importantly, after five campaign calls, clients are more likely to reject the term deposit unless the duration is high. Most “yes” clients were approached by less than 10 times.This suggests that the bank should resist calling a client for more than five times, which can be disturbing and increase dissatisfaction.</p><br>
 
         <h3>3.5 Scatter matrix & Correlation matrix</h3>
-        <img alt="scatter matrix" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/5.%20Scatter%20Matrix.png"/>
+        <img class = 'images-center'alt="scatter matrix" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/5.%20Scatter%20Matrix.png"/>
         <img alt="correlation" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/6.%20Correlation%20Matrix.png"/>
         <p>The scatter matrix does not reveal any clear relationship among age, balance, duration and campaign.</p>
         <p>To investigate more about correlation, a correlation matrix was plotted with all qualitative variables. Clearly, “campaign outcome” has a strong correlation with “duration”, a moderate correlation with “previous contacts”, and mild correlations between “balance”, “month of contact” and “number of campaign”. Their influences on campaign outcome will be investigated further in the machine learning part.</p><br>
