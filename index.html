@@ -120,7 +120,7 @@
         <p> Now we have a good understanding of the distribution of key variables. Five plots will be generated to further investigate the influence of different customer characteristics on the subscription rate. </p>
 
         <h4>Visualize the subscription and contact rate by customer age</h4>
-        <img alt="correlation" src=""/>
+        <img alt="age" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/7.contact%20by%20age.jpg"/>
         <p><strong>Insights: target the youngest and the oldest instead of the middle-aged</strong></p>
         <p>Green vertical bars indicate that clients with a age of 60+ have the highest subscription rate. About 17% of the subscriptions came from the clients aged between 18 to 29. More than 50% of the subscriptions are contributed by the youngest and the eldest clients.</p>
         <ul>
@@ -130,7 +130,7 @@
         <p>However, red vertical bars show that the bank focused its marketing efforts on the middle-aged group, which returned lower subscription rates than the younger and older groups. Thus, to make the marketing campaign more effective, the bank should target younger and older clients in the future.</p>
 
         <h4>Visualize the subscription rate by balance level</h4>
-        <img alt="correlation" src=""/>
+        <img alt="balance" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/8.%20balance.png"/>
         <p><strong>Insights: target clients with average or high balance</strong></p>
         <p>To identify the trend more easily, clients are categorized into four groups based on their levels of balance:</p>
         <ul>
@@ -144,7 +144,7 @@
 
 
         <h4>Visualize the subscription rate by age and balance</h4>
-        <img alt="correlation" src=""/>
+        <img alt="age balance" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/9.Balance%20and%20Age.png"/>
         <p><strong>Insights: target older clients with high balance levels</strong></p>
         <p>While age represents a person’s life stage and balance represents a person’s financial condition, jointly evaluating the impact of these two factors enables us to investigate if there is a common trend across all ages, and to identify which combination of client features indicates the highest likelihood of subscription.</p>
         <p>In order to investigate the combined effect of age and balance on a client’s decision, we performed a two-layer grouping, segmenting customers according to their balance levels within each age group.</p>
@@ -156,12 +156,12 @@
 
 
         <h4> Visualize the subscription rate by job</h4>
-        <img alt="correlation" src=""/>
+        <img alt="job" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/10.job.png"/>
         <p><strong>Insights: target students and retired clients</strong></p>
         <p>As noted from the horizontal bar chart, students and retired clients account for more than 50% of subscription, which is consistent with the previous finding of higher subscription rates among the younger and older.</p>
 
         <h4>Visualize the subscription and contact rate by month</h4>
-        <img alt="correlation" src=""/>
+        <img alt="month" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/11.%20Rate%20in%20Each%20Month.png"/>
         <p><strong>Insights: initiate the telemarketing campaign in fall or spring</strong></p>
         <p>Besides customer characteristics, external factors may also have an impact on the subscription rate, such as seasons and the time of calling. So the month of contact is also analyzed here.</p>
 
@@ -197,16 +197,16 @@
 
         <h3> Build Classification Model</h3>
         <p>Four different classification algorithms (Logistic Regression, K-Neighbors Classifier, Decision Tree Classifier, and Gaussian NB) were run on the dataset and the best-performing one was used to build the classification model.</p>
-        <img alt="correlation" src=""/>
+        <img alt="compare algo" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/compare1.jpg"/>
         <p><strong>Logistic regression is the best performing model.</strong></p>
         <p>Among all algorithms, logistic regression had the highest accuracy, about 88%, so it would be used to predict customers' responses. The test of logistic regression model successfully achieved an accuracy of 89.08%, suggesting high level of strength of this model to classify customers' responses given all the defined customer features. To evaluate the performance of the logistic regression model, a confusion matrix was created. </p>
-        <img alt="correlation" src=""/>
+        <img alt="confusion matrix" src="https://github.com/yfsui/Project---Bank_Telemarketing_Analysis/raw/gh-pages/images/confusion1.jpg"/>
         <p><strong>However, the result of accuracy score can possibly yield misleading result if the data set is unbalanced, because the number of observations in different classes largely vary.</strong></p>
         <p>A confusion matrix gives a detailed breakdown of prediction result and error types. Each cell in the matrix represents a combination of instances of the predicted response and the actual response. In the test set, the matrix proves that the algorithm performed well because most test results (7277 True Positive predictions) locate on the diagonal cells which represent correct predictions. 891 tests (False negative) predicted the bank’s client would subscribe to the term deposit but they actually did not.</p>
         <p><strong>A problem revealed by this confusion matrix is that the dataset is highly unbalanced, with nearly all client actually decline to subscribe. </strong>This infers that the accuracy score is biased, and further evaluation should be carried out to determine the accuracy of logistic regression model.</p>
 
         <p>Classification report shows the precision, recall, F1 and support scores for the LR classification model.</p>
-        <img alt="correlation" src=""/>
+        <img alt="Classification report" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/report1.png"/>
         <ul>
         	<li>Precision of 0 (the client said no) represents that for all instances predicted as no subscription, the percentage of clients that actually said no is 89%.</li>
         	<li>Recall is the ability of a classifier to find all positive instances. Recall of 0 indicates that for all clients that actually said no, the model predicts 100% correctly that they would decline the offer.</li>
