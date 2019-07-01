@@ -98,10 +98,10 @@
 
         <dl>
         <dt>The distribution of duration</dt>
-          <p>As observed from the box plot, the duration of contact has a median of 3 minutes, with an interquartile range of 1.73 minutes to 5.3 minutes. The left-skewed boxplot indicates that most calls are relatively short. Also, there is a large number of outliers ranging from 10 minutes to 40 minutes, which are worth further study.</p>
+          <dd>As observed from the box plot, the duration of contact has a median of 3 minutes, with an interquartile range of 1.73 minutes to 5.3 minutes. The left-skewed boxplot indicates that most calls are relatively short. Also, there is a large number of outliers ranging from 10 minutes to 40 minutes, which are worth further study.</dd>
           
           <dt>The distribution of campaign</dt>
-          <p>About half of the clients have been contacted by the bank for the second time, while 25% was first introduced to the term deposit. Most clients have been reached by the bank for one to three times, which is reasonable. However, some clients have been contacted by as high as 58 times, which is not normal. These clients may have some special needs that require frequent contact.</p>
+          <dd>About half of the clients have been contacted by the bank for the second time, while 25% was first introduced to the term deposit. Most clients have been reached by the bank for one to three times, which is reasonable. However, some clients have been contacted by as high as 58 times, which is not normal. These clients may have some special needs that require frequent contact.</dd>
         </dl>
 
         <h4>Visualize the relationship between phone call duration & the number of campaigns</h4>
@@ -197,16 +197,16 @@
 
         <h3> Build Classification Model</h3>
         <p>Four different classification algorithms (Logistic Regression, K-Neighbors Classifier, Decision Tree Classifier, and Gaussian NB) were run on the dataset and the best-performing one was used to build the classification model.</p>
-        <img alt="compare algo" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/compare1.jpg"/>
+        <img alt="compare algo" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/12.compare.jpg"/>
         <p><strong>Logistic regression is the best performing model.</strong></p>
         <p>Among all algorithms, logistic regression had the highest accuracy, about 88%, so it would be used to predict customers' responses. The test of logistic regression model successfully achieved an accuracy of 89.08%, suggesting high level of strength of this model to classify customers' responses given all the defined customer features. To evaluate the performance of the logistic regression model, a confusion matrix was created. </p>
-        <img alt="confusion matrix" src="https://github.com/yfsui/Project---Bank_Telemarketing_Analysis/raw/gh-pages/images/confusion1.jpg"/>
+        <img alt="confusion matrix" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/13.confusion.jpg"/>
         <p><strong>However, the result of accuracy score can possibly yield misleading result if the data set is unbalanced, because the number of observations in different classes largely vary.</strong></p>
         <p>A confusion matrix gives a detailed breakdown of prediction result and error types. Each cell in the matrix represents a combination of instances of the predicted response and the actual response. In the test set, the matrix proves that the algorithm performed well because most test results (7277 True Positive predictions) locate on the diagonal cells which represent correct predictions. 891 tests (False negative) predicted the bank’s client would subscribe to the term deposit but they actually did not.</p>
         <p><strong>A problem revealed by this confusion matrix is that the dataset is highly unbalanced, with nearly all client actually decline to subscribe. </strong>This infers that the accuracy score is biased, and further evaluation should be carried out to determine the accuracy of logistic regression model.</p>
 
         <p>Classification report shows the precision, recall, F1 and support scores for the LR classification model.</p>
-        <img alt="Classification report" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/report1.png"/>
+        <img alt="Classification report" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/14.report.png"/>
         <ul>
         	<li>Precision of 0 (the client said no) represents that for all instances predicted as no subscription, the percentage of clients that actually said no is 89%.</li>
         	<li>Recall is the ability of a classifier to find all positive instances. Recall of 0 indicates that for all clients that actually said no, the model predicts 100% correctly that they would decline the offer.</li>
@@ -231,9 +231,9 @@
         	<li>Feature 2: students or retired people</li>
         	<li>Feature 3: a balance of more than 5000 euros</li>
         </ul>
-        <p>By applying logistic and ridge regression algorithms, classification and estimation model were successfully built. With these two models, the bank will be able to predict a customer's response to its telemarketing campaign before calling this customer. In this way, the bank can allocate more marketing efforts to the clients who are classified as highly likely to accept term deposits, and call less to those who are unlikely to make term deposits.<br>
+        <p>By applying logistic and ridge regression algorithms, classification and estimation model were successfully built. With these two models, the bank will be able to predict a customer's response to its telemarketing campaign before calling this customer. In this way, the bank can allocate more marketing efforts to the clients who are classified as highly likely to accept term deposits, and call less to those who are unlikely to make term deposits.</p>
 
-        In addition, predicting duration before calling and adjusting marketing plan benefit both the bank and its clients. On the one hand, it will increase the efficiency of the bank’s telemarketing campaign, saving time and efforts. On the other hand, it prevents some clients from receiving undesirable advertisements, raising customer satisfaction. With the aid of logistic and ridge regression models, the bank can enter a virtuous cycle of effective marketing, more investments and happier customers.</p><br>
+        <p>In addition, predicting duration before calling and adjusting marketing plan benefit both the bank and its clients. On the one hand, it will increase the efficiency of the bank’s telemarketing campaign, saving time and efforts. On the other hand, it prevents some clients from receiving undesirable advertisements, raising customer satisfaction. With the aid of logistic and ridge regression models, the bank can enter a virtuous cycle of effective marketing, more investments and happier customers.</p><br>
 
         <h1>Recommendations</h1>
         <p><strong>1. More appropriate timing</strong></p>
