@@ -79,7 +79,7 @@
         <p>To obtain a better understanding of the dataset, the distribution of key variables and the relationships among them were plotted.</p>
 
         <h4>Visualize the distribution of customer age and balance levels:</h4>
-        <img alt="age & balance" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/1.%20Distribution%20of%20Age%20and%20Balance.png"/>
+        <img alt="age & balance distribution" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/1.%20Distribution%20of%20Age%20and%20Balance.png"/>
 
         <dl>
         <dt>The distribution of age</dt>
@@ -89,12 +89,12 @@
         </dl>
 
         <h4>Visualize the relationship between customer age and balance</h4>
-        <img alt="age & balance" src=""/>
+        <img alt="age & balance scatter" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/2.%20Scatter%20Plot%20of%20Age%20and%20Balance.png"/>
 
         <p>Based on this scatter plot, there is no clear relationship between client’s age and balance level.Nevertheless, over the age of 60, clients tend to have a significantly lower balance, mostly under 5,000 euros. This is due to the fact that most people retire after 60 and no longer have a reliable income source.</p>
 
         <h4>Visualize the distribution of phone call duration & the number of campaigns
-        <img alt="duration & campaign" src=""/>
+        <img alt="duration & campaign distribution" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/3.%20Distribution%20of%20Duration%20and%20Campaign.png"/>
 
         <dl>
         <dt>The distribution of duration</dt>
@@ -104,15 +104,15 @@
           <p>About half of the clients have been contacted by the bank for the second time, while 25% was first introduced to the term deposit. Most clients have been reached by the bank for one to three times, which is reasonable. However, some clients have been contacted by as high as 58 times, which is not normal. These clients may have some special needs that require frequent contact.</p>
         </dl>
 
-        <h4>Visualize the relationship between phone call duration & the number of campaigns
-        <img alt="duration & campaign" src=""/>
+        <h4>Visualize the relationship between phone call duration & the number of campaigns</h4>
+        <img alt="duration & campaign scatter" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/4.%20Scatter%20Plot%20of%20Duration%20and%20Campaign.png"/>
         <p>In this scatter plot, clients subscribed to term deposits are denoted as "yes" while those did not are denoted as "no".</p>
 
         <p>As we can see from the plot, “yes” clients and “no” clients are forming two relatively separate clusters. Compared to “no” clients”, “yes” clients were contacted by fewer times and had longer call duration. More importantly, after five campaign calls, clients are more likely to reject the term deposit unless the duration is high. Most “yes” clients were approached by less than 10 times.This suggests that the bank should resist calling a client for more than five times, which can be disturbing and increase dissatisfaction.</p>
 
         <h4>Scatter matrix & Correlation matrix</h4>
-        <img alt="scatter matrix" src=""/>
-        <img alt="correlation" src=""/>
+        <img alt="scatter matrix" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/5.%20Scatter%20Matrix.png"/>
+        <img alt="correlation" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/6.%20Correlation%20Matrix.png"/>
         <p>The scatter matrix does not reveal any clear relationship among age, balance, duration and campaign.</p>
         <p>To investigate more about correlation, a correlation matrix was plotted with all qualitative variables. Clearly, “campaign outcome” has a strong correlation with “duration”, a moderate correlation with “previous contacts”, and mild correlations between “balance”, “month of contact” and “number of campaign”. Their influences on campaign outcome will be investigated further in the machine learning part.</p><br>
 
@@ -138,7 +138,7 @@
           <li>Low Balance: clients with a balance between 0 and 1000 euros</li>
           <li>Average Balance: clients with a balance between 1000 and 5000 euros.</li>
           <li>High Balance: clients with a balance greater than 5000 euros.</li>
-        <ul>
+        </ul>
         <p>Unsurprisingly, this bar chart indicates a positive correlation between clients’ balance levels and subscription rate. Clients with negative balances only returned a subscription rate of 6.9% while clients with average or high balances had significantly higher subscription rates, nearly 15%.</p>
         <p>However, in this campaign, more than 50% of clients contacted only have a low balance level. In the future, the bank should shift its marketing focus to high-balance customers to secure more term deposits.</p>
 
@@ -151,7 +151,7 @@
         <ul>
           <li>The graph tells the same story regarding the subscription rate for different age groups: <strong>the willingness to subscribe is exceptionally high for people aged above 60 and younger people aged below 30</strong> also have a distinguishable higher subscription rate than those of other age groups.</li>
           <li>Furthermore, <strong>the effect of balance levels on subscription decision is applicable to each individual age group</strong>: every age group shares a common trend that the percentage of subscription increases with balance.</li>
-        <ul>
+        </ul>
         <p>In sum, the bank should <strong>prioritize its telemarketing to clients who are above 60 years old and have positive balances</strong>, because they have the highest acceptance rate of about 35%. The next group the bank should focus on is <strong>young clients with positive balances</strong>, who showed high subscription rates between 15% and 20%.</p>
 
 
@@ -173,7 +173,7 @@
 
         <p>Clearly, <strong>these two lines move in different directions which strongly indicates the inappropriate timing of the bank’s marketing campaign. </strong> To improve the marketing campaign, the bank should consider initiating the telemarketing campaign in fall and spring when the subscription rate tends to be higher.</p>
 
-        <p>Nevertheless, the bank should be cautious when analyzing external factors. More data from previous marketing campaign should be collected and analyzed to make sure that this seasonal effect is constant over time and applicable to the future.</p>
+        <p>Nevertheless, the bank should be cautious when analyzing external factors. More data from previous marketing campaign should be collected and analyzed to make sure that this seasonal effect is constant over time and applicable to the future.</p><br>
 
 
         <h1>Machine Learning: Classification</h1>
@@ -211,7 +211,7 @@
         	<li>Precision of 0 (the client said no) represents that for all instances predicted as no subscription, the percentage of clients that actually said no is 89%.</li>
         	<li>Recall is the ability of a classifier to find all positive instances. Recall of 0 indicates that for all clients that actually said no, the model predicts 100% correctly that they would decline the offer.</li>
         </ul>
-        <p>In general, the report shows that <strong>the LR model has great predictive power to identify the customers who would not subscribe to the term deposit.</strong> However, because of the limited number of clients accepting the term deposit, there is <strong>a need for stratified sampling or rebalancing to deal with this structural weakness</strong> before we conclude whether LR algorithm can accurately classify those who are more likely to subscribe.</p>
+        <p>In general, the report shows that <strong>the LR model has great predictive power to identify the customers who would not subscribe to the term deposit.</strong> However, because of the limited number of clients accepting the term deposit, there is <strong>a need for stratified sampling or rebalancing to deal with this structural weakness</strong> before we conclude whether LR algorithm can accurately classify those who are more likely to subscribe.</p><br>
 
         <h1> Machine Learning: Regression</h1>
         <p>Regression analysis is carried out to complement the classification result. Since the duration of a phone call is positively correlated with the campaign outcome, it can serve as another indicator of the possibility of subscription. In this part, regression algorithms will be used to estimate the duration of a phone call, helping the bank better predict subscription rate.</p>
@@ -219,7 +219,7 @@
         <h3> Build Regression Model</h3>
         <p>Six different regression algorithms (Linear Regression, Lasso, Ridge, ElasticNet, K Neighbors and Decision Tree) were run on the dataset and the best-performing one would be used to build the regression model. As we can see, ridge regression slightly outperformed other models, and the same was true after standardization.</p>
 
-        <p> The ridge regression model had an MSE of 17.78. According to the previous analysis, observations on duration are extremely varied from 0.1 to 81.97 minutes in this dataset. Therefore, a 17.78 MSE testifies that ridge regression is a sound model in predicting the target variable and suggest that the bank can roughly estimate the duration of campaign calls of each client using their customer profiles such as age, job, and loans.</p>
+        <p> The ridge regression model had an MSE of 17.78. According to the previous analysis, observations on duration are extremely varied from 0.1 to 81.97 minutes in this dataset. Therefore, a 17.78 MSE testifies that ridge regression is a sound model in predicting the target variable and suggest that the bank can roughly estimate the duration of campaign calls of each client using their customer profiles such as age, job, and loans.</p><br>
 
 
         <h1> Conclusion</h1>
@@ -233,7 +233,7 @@
         </ul>
         <p>By applying logistic and ridge regression algorithms, classification and estimation model were successfully built. With these two models, the bank will be able to predict a customer's response to its telemarketing campaign before calling this customer. In this way, the bank can allocate more marketing efforts to the clients who are classified as highly likely to accept term deposits, and call less to those who are unlikely to make term deposits.<br>
 
-        In addition, predicting duration before calling and adjusting marketing plan benefit both the bank and its clients. On the one hand, it will increase the efficiency of the bank’s telemarketing campaign, saving time and efforts. On the other hand, it prevents some clients from receiving undesirable advertisements, raising customer satisfaction. With the aid of logistic and ridge regression models, the bank can enter a virtuous cycle of effective marketing, more investments and happier customers.</p>
+        In addition, predicting duration before calling and adjusting marketing plan benefit both the bank and its clients. On the one hand, it will increase the efficiency of the bank’s telemarketing campaign, saving time and efforts. On the other hand, it prevents some clients from receiving undesirable advertisements, raising customer satisfaction. With the aid of logistic and ridge regression models, the bank can enter a virtuous cycle of effective marketing, more investments and happier customers.</p><br>
 
         <h1>Recommendations</h1>
         <p><strong>1. More appropriate timing</strong></p>
@@ -244,143 +244,7 @@
 
         <p><strong>3. Better services provision</strong></p>
         <p>With a more granular understanding of its customer base, the bank has the ability to provide better banking services. For example, marital status and occupation reveal a customer's life stage while loan status indicates his/her overall risk profile. With this information, the bank can estimate when a customer might need to make an investment. In this way, the bank can better satisfy its customer demand by providing banking services for the right customer at the right time.</p>
-        
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        <h5>Headline 5</h5>
-
       
-
-        <h6>Headline 6</h6>
-
-        
-
-        <p>Roses are <em>emphasized</em></br>
-        Violets are <strong>strong</strong></p>
-
-        <h3>We all like making lists</h3>
-
-        <ul>
-          <li>Red Apples</li>
-          <li>Purple Grapes</li>
-          <li>Green Kiwifruits</li>
-        </ul>
-
-        <p>Let's get crazy:</p>
-
-        <ol>
-          <li>
-            <p>This is a list item with two paragraphs. Lorem ipsum dolor
-            sit amet, consectetuer adipiscing elit. Aliquam hendrerit
-            mi posuere lectus.</p>
-
-            <p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet
-            vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
-            sit amet velit.</p>
-          </li>
-          <li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
-        </ol>
-
-        <p>What about some code <strong>in</strong> a list? That's insane, right?</p>
-
-        <ol>
-          <li>
-            <p>In Ruby you can map like this:</p>
-              <code>['a', 'b'].map { |x| x.uppercase }</code>
-          </li>
-          <li>
-            <p>In Rails, you can do a shortcut:</p>
-              <code>['a', 'b'].map(&amp;:uppercase)</code>
-          </li>
-        </ol>
-
-        <p>Some people seem to like definition lists</p>
-
-        <dl>
-        <dt>Lower cost</dt>
-          <dd>The new version of this product costs significantly less than the previous one!</dd>
-          <dt>Easier to use</dt>
-          <dd>We've changed the product so that it's much easier to use!</dd>
-        </dl>
-
-        <h3>I am a robot</h3>
-
-        <p>Maybe you want to print <code>robot</code> to the console 1000 times. Why not?</p>
-<pre>
-def robot_invasion
-puts("robot " * 1000)
-end
-</pre>
-
-<p>How about we throw some angle braces and ampersands in there?</p>
-
-<pre><code>&lt;div class="footer"&gt;
-&amp;copy; 2013 Zorg Industries
-&lt;/div&gt;
-</code></pre>
-
-        <h3>If you need to blame someone, the best way to do so is by quoting them:</h3>
-
-        <blockquote>
-        <p>I, at any rate, am convinced that He does not throw dice.</p>
-        </blockquote>
-
-        <p>Or perhaps someone a little less eloquent:</p>
-
-        <blockquote>
-        <p>I wish you'd have given me this written question ahead of time so I
-        could plan for it... I'm sure something will pop into my head here in
-        the midst of this press conference, with all the pressure of trying to
-        come up with answer, but it hadn't yet...</p>
-
-        <p>I don't want to sound like
-        I have made no mistakes. I'm confident I have. I just haven't - you
-        just put me under the spot here, and maybe I'm not as quick on my feet
-        as I should be in coming up with one.</p>
-        </blockquote>
-
-        <h2>An octocat appears!</h2>
-        <img alt="an octocat!" src="http://octodex.github.com/images/octocat-de-los-muertos.jpg" />
-        <p>My favorite octocat, illustrated by <a href="https://github.com/cameronmcefee">@cameronmceffee</a>.</p>
-
-        <h2>Table for two</h2>
-
-        <table>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Rank</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Tom Preston-Werner</td>
-          <td>Awesome</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Albert Einstein</td>
-          <td>Nearly as awesome</td>
-        </tr>
-        </table>
 
       </section>
     </div>
