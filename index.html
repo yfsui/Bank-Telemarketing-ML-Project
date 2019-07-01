@@ -58,7 +58,7 @@
         </ul><br>
         
 
-        <h2>Data Cleaning</h2>
+        <h3>Data Cleaning</h3>
         <p>Several changes were made to the dataset to prepare it for analysis.</p>
         <ol>
           <li>
@@ -93,7 +93,7 @@
 
         <p>Based on this scatter plot, there is no clear relationship between client’s age and balance level.Nevertheless, over the age of 60, clients tend to have a significantly lower balance, mostly under 5,000 euros. This is due to the fact that most people retire after 60 and no longer have a reliable income source.</p>
 
-        <h4>Visualize the distribution of phone call duration & the number of campaigns</h4>
+        <h3>3.3 Visualize the distribution of phone call duration & the number of campaigns</h3>
         <img alt="duration & campaign distribution" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/3.%20Distribution%20of%20Duration%20and%20Campaign.png"/>
 
         <dl>
@@ -103,13 +103,13 @@
           <p>About half of the clients have been contacted by the bank for the second time, while 25% was first introduced to the term deposit. Most clients have been reached by the bank for one to three times, which is reasonable. However, some clients have been contacted by as high as 58 times, which is not normal. These clients may have some special needs that require frequent contact.</p>
         </dl>
 
-        <h4>Visualize the relationship between phone call duration & the number of campaigns</h4>
+        <h3>3.4 Visualize the relationship between phone call duration & the number of campaigns</h3>
         <img alt="duration & campaign scatter" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/4.%20Scatter%20Plot%20of%20Duration%20and%20Campaign.png"/>
         <p>In this scatter plot, clients subscribed to term deposits are denoted as "yes" while those did not are denoted as "no".</p>
 
         <p>As we can see from the plot, “yes” clients and “no” clients are forming two relatively separate clusters. Compared to “no” clients”, “yes” clients were contacted by fewer times and had longer call duration. More importantly, after five campaign calls, clients are more likely to reject the term deposit unless the duration is high. Most “yes” clients were approached by less than 10 times.This suggests that the bank should resist calling a client for more than five times, which can be disturbing and increase dissatisfaction.</p>
 
-        <h4>Scatter matrix & Correlation matrix</h4>
+        <h3>3.5 Scatter matrix & Correlation matrix</h3>
         <img alt="scatter matrix" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/5.%20Scatter%20Matrix.png"/>
         <img alt="correlation" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/6.%20Correlation%20Matrix.png"/>
         <p>The scatter matrix does not reveal any clear relationship among age, balance, duration and campaign.</p>
@@ -118,7 +118,7 @@
         <h1>Part 4. Data Visualization </h1>
         <p> Now we have a good understanding of the distribution of key variables. Five plots will be generated to further investigate the influence of different customer characteristics on the subscription rate. </p>
 
-        <h4>Visualize the subscription and contact rate by customer age</h4>
+        <h3>4.1 Visualize the subscription and contact rate by customer age</h3>
         <img alt="age" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/7.contact%20by%20age.jpg"/>
         <p><strong>Insights: target the youngest and the oldest instead of the middle-aged</strong></p>
         <p>Green vertical bars indicate that clients with a age of 60+ have the highest subscription rate. About 17% of the subscriptions came from the clients aged between 18 to 29. More than 50% of the subscriptions are contributed by the youngest and the eldest clients.</p>
@@ -128,7 +128,7 @@
         </ul>
         <p>However, red vertical bars show that the bank focused its marketing efforts on the middle-aged group, which returned lower subscription rates than the younger and older groups. Thus, to make the marketing campaign more effective, the bank should target younger and older clients in the future.</p>
 
-        <h4>Visualize the subscription rate by balance level</h4>
+        <h3>4.2 Visualize the subscription rate by balance level</h3>
         <img alt="balance" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/8.%20balance.png"/>
         <p><strong>Insights: target clients with average or high balance</strong></p>
         <p>To identify the trend more easily, clients are categorized into four groups based on their levels of balance:</p>
@@ -142,7 +142,7 @@
         <p>However, in this campaign, more than 50% of clients contacted only have a low balance level. In the future, the bank should shift its marketing focus to high-balance customers to secure more term deposits.</p>
 
 
-        <h4>Visualize the subscription rate by age and balance</h4>
+        <h3>4.3 Visualize the subscription rate by age and balance</h3>
         <img alt="age balance" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/9.Balance%20and%20Age.png"/>
         <p><strong>Insights: target older clients with high balance levels</strong></p>
         <p>While age represents a person’s life stage and balance represents a person’s financial condition, jointly evaluating the impact of these two factors enables us to investigate if there is a common trend across all ages, and to identify which combination of client features indicates the highest likelihood of subscription.</p>
@@ -154,12 +154,12 @@
         <p>In sum, the bank should <strong>prioritize its telemarketing to clients who are above 60 years old and have positive balances</strong>, because they have the highest acceptance rate of about 35%. The next group the bank should focus on is <strong>young clients with positive balances</strong>, who showed high subscription rates between 15% and 20%.</p>
 
 
-        <h4> Visualize the subscription rate by job</h4>
+        <h3>4.4 Visualize the subscription rate by job</h3>
         <img alt="job" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/10.job.png"/>
         <p><strong>Insights: target students and retired clients</strong></p>
         <p>As noted from the horizontal bar chart, students and retired clients account for more than 50% of subscription, which is consistent with the previous finding of higher subscription rates among the younger and older.</p>
 
-        <h4>Visualize the subscription and contact rate by month</h4>
+        <h3>4.5 Visualize the subscription and contact rate by month</h3>
         <img alt="month" src="https://raw.githubusercontent.com/yfsui/Project---Bank_Telemarketing_Analysis/gh-pages/images/11.%20Rate%20in%20Each%20Month.png"/>
         <p><strong>Insights: initiate the telemarketing campaign in fall or spring</strong></p>
         <p>Besides customer characteristics, external factors may also have an impact on the subscription rate, such as seasons and the time of calling. So the month of contact is also analyzed here.</p>
@@ -179,7 +179,7 @@
 
         <p>The main objective of this project is to identify the most responsive customers before the marketing campaign so that the bank will be able to efficiently reach out to them, saving time and marketing resources. To achieve this objective, classification algorithms will be employed. By analyzing customer statistics, a classification model will be built to classify all clients into two groups: "yes" to term deposits and "no" to term deposits.</p>
 
-        <h2>Prepare Data for Classification</h2>
+        <h3>Prepare Data for Classification</h3>
         <ol>
           <li>
             <p>Select the most relevant customer information: job title, education, age, balance, default record, housing record and loan record</p></li>
