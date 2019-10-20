@@ -11,6 +11,7 @@ The dataset is publicly available in the UCI Machine Learning Repository, which 
 
 ## Data Analysis & Report
 Please see codes in the file ***Portuguese Bank Telemarketing Analysis.ipynb***.
-(P.S. This file is large and does not support previewing, so you may have to download it before viewing. Alternatively, you can see the codes on my Kaggle page, which should load faster. https://www.kaggle.com/yufengsui/machine-learning-project-bank-marketing-analytics)
+
+(P.S. This file is large and does not support previewing, so you may have to download it first. Alternatively, you can see the codes on my Kaggle page, which should load faster. https://www.kaggle.com/yufengsui/machine-learning-project-bank-marketing-analytics)
 
 Please follow this link to see the project report: https://yfsui.github.io/Project---Bank_Telemarketing_Analysis/.
